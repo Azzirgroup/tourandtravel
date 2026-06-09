@@ -136,6 +136,43 @@ def setup_workspace_resources():
 
 	sync_safari_clients()
 
+	# The number cards / charts above must exist before the workspace tiles can
+	# resolve them, so force the workspace + sidebar definitions last.
+	resync_workspaces()
+
+
+# (app, *relative path parts) for each app-owned record file that should always
+# mirror the repo, regardless of the modified-timestamp skip in import_file.
+WORKSPACE_FILES = [
+	("sunny_safaris", "sunny_safaris", "workspace", "sunny_safaris", "sunny_safaris.json"),
+	("sunny_safaris", "workspace_sidebar", "sunny_safaris.json"),
+	("sunny_safaris", "desktop_icon", "sunny_safaris.json"),
+]
+
+
+def resync_workspaces():
+	"""Force-reimport the workspace, sidebar and desktop icon from app files.
+
+	Frappe's import_file skips non-DocType records when the database `modified`
+	timestamp is newer than the file's (e.g. after a UI edit on Frappe Cloud, or
+	on a redeploy with an unchanged timestamp). Forcing the import makes the
+	app's shipped definition the source of truth on every migrate.
+	"""
+	import os
+
+	from frappe.modules.import_file import import_file_by_path
+
+	for app, *parts in WORKSPACE_FILES:
+		path = frappe.get_app_path(app, *parts)
+		if not os.path.exists(path):
+			continue
+		try:
+			import_file_by_path(path, force=True)
+		except Exception:
+			frappe.log_error(title="Sunny Safaris: workspace resync failed", message=frappe.get_traceback())
+
+	frappe.db.commit()
+
 
 def create_number_cards():
 	"""Idempotently create/update the workspace Number Cards."""
