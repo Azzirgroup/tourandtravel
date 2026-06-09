@@ -1,0 +1,358 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SB-.#####.-.YYYY",
+ "creation": "2026-06-09 10:09:18.197455",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_customer_details",
+  "customer",
+  "customer_name",
+  "contact",
+  "cb_customer_details_1",
+  "package_type",
+  "destination",
+  "nationality",
+  "sb_crm_references",
+  "lead",
+  "opportunity",
+  "quotation",
+  "cb_crm_references_1",
+  "sales_order",
+  "project",
+  "sb_trip_schedule",
+  "start_date",
+  "end_date",
+  "duration_days",
+  "cb_trip_schedule_1",
+  "number_of_adults",
+  "number_of_children",
+  "total_guests",
+  "sb_status",
+  "booking_status",
+  "cb_status_1",
+  "payment_status",
+  "sb_travelers",
+  "travelers",
+  "sb_vehicle_assignments",
+  "vehicle_assignments",
+  "sb_guides",
+  "guides",
+  "sb_supplier_reservations",
+  "supplier_reservations",
+  "sb_operations",
+  "operations_sheet",
+  "sb_financials",
+  "total_amount",
+  "deposit_amount",
+  "deposit_paid",
+  "cb_financials_1",
+  "balance_amount",
+  "balance_paid",
+  "sb_notes",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "sb_customer_details",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1,
+   "fetch_from": "customer.customer_name"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "cb_customer_details_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "package_type",
+   "fieldtype": "Select",
+   "label": "Package Type",
+   "options": "Safari\nClimbing\nCamping\nTransfers\nCustom"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "sb_crm_references",
+   "fieldtype": "Section Break",
+   "label": "CRM References",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "label": "Opportunity",
+   "options": "Opportunity"
+  },
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "label": "Quotation",
+   "options": "Quotation"
+  },
+  {
+   "fieldname": "cb_crm_references_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "sb_trip_schedule",
+   "fieldtype": "Section Break",
+   "label": "Trip Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "label": "Duration (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_trip_schedule_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_adults",
+   "fieldtype": "Int",
+   "label": "Number of Adults",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_children",
+   "fieldtype": "Int",
+   "label": "Number of Children"
+  },
+  {
+   "fieldname": "total_guests",
+   "fieldtype": "Int",
+   "label": "Total Guests",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_status",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "booking_status",
+   "fieldtype": "Select",
+   "label": "Booking Status",
+   "options": "Draft\nConfirmed\nIn Progress\nCompleted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "cb_status_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPartial\nPaid",
+   "default": "Unpaid"
+  },
+  {
+   "fieldname": "sb_travelers",
+   "fieldtype": "Section Break",
+   "label": "Travelers",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "travelers",
+   "fieldtype": "Table",
+   "label": "Travelers",
+   "options": "Traveler"
+  },
+  {
+   "fieldname": "sb_vehicle_assignments",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Assignments",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "vehicle_assignments",
+   "fieldtype": "Table",
+   "label": "Vehicle Assignments",
+   "options": "Vehicle Assignment"
+  },
+  {
+   "fieldname": "sb_guides",
+   "fieldtype": "Section Break",
+   "label": "Guides",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "guides",
+   "fieldtype": "Table",
+   "label": "Guides",
+   "options": "Booking Guide"
+  },
+  {
+   "fieldname": "sb_supplier_reservations",
+   "fieldtype": "Section Break",
+   "label": "Supplier Reservations",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "supplier_reservations",
+   "fieldtype": "Table",
+   "label": "Supplier Reservations",
+   "options": "Supplier Reservation"
+  },
+  {
+   "fieldname": "sb_operations",
+   "fieldtype": "Section Break",
+   "label": "Operations"
+  },
+  {
+   "fieldname": "operations_sheet",
+   "fieldtype": "Link",
+   "label": "Operations Sheet",
+   "options": "Safari Operations Sheet"
+  },
+  {
+   "fieldname": "sb_financials",
+   "fieldtype": "Section Break",
+   "label": "Financials"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "deposit_paid",
+   "fieldtype": "Currency",
+   "label": "Deposit Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_financials_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Currency",
+   "label": "Balance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_paid",
+   "fieldtype": "Currency",
+   "label": "Balance Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Safari Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "default_view": "Calendar",
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-09 20:45:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sunny Safaris",
+ "name": "Safari Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

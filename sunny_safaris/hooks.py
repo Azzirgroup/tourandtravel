@@ -86,7 +86,11 @@ app_license = "mit"
 # ------------
 
 # before_install = "sunny_safaris.install.before_install"
-# after_install = "sunny_safaris.install.after_install"
+after_install = "sunny_safaris.install.after_install"
+
+# Migration
+# ------------
+after_migrate = ["sunny_safaris.install.after_migrate"]
 
 # Uninstallation
 # ------------
@@ -139,6 +143,18 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+
+doc_events = {
+	"Safari Booking": {
+		"on_update": "sunny_safaris.sunny_safaris.doctype.safari_client.safari_client.update_for_booking",
+		"on_submit": "sunny_safaris.sunny_safaris.doctype.safari_client.safari_client.update_for_booking",
+		"on_cancel": "sunny_safaris.sunny_safaris.doctype.safari_client.safari_client.update_for_booking",
+	}
+}
+
+override_doctype_dashboards = {
+	"Customer": "sunny_safaris.overrides.customer_dashboard.get_dashboard_data"
+}
 
 # Scheduled Tasks
 # ---------------

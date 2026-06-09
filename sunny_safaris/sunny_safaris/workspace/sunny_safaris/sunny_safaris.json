@@ -1,0 +1,333 @@
+{
+ "app": "sunny_safaris",
+ "charts": [
+  {
+   "chart_name": "Booking Revenue Trend",
+   "label": "Booking Revenue Trend"
+  },
+  {
+   "chart_name": "Bookings Over Time",
+   "label": "Bookings Over Time"
+  },
+  {
+   "chart_name": "Safari Bookings by Status",
+   "label": "Safari Bookings by Status"
+  },
+  {
+   "chart_name": "Safari Bookings by Package",
+   "label": "Safari Bookings by Package"
+  },
+  {
+   "chart_name": "Workshop Job Cards by Status",
+   "label": "Workshop Job Cards by Status"
+  },
+  {
+   "chart_name": "Operations by Dispatch Status",
+   "label": "Operations by Dispatch Status"
+  }
+ ],
+ "content": "[{\"id\": \"hdr_main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Sunny Safaris</b></span>\", \"col\": 12}}, {\"id\": \"sc_book\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Booking\", \"col\": 3}}, {\"id\": \"sc_ops\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Operations Sheet\", \"col\": 3}}, {\"id\": \"sc_job\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Workshop Job Card\", \"col\": 3}}, {\"id\": \"sc_client\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Client\", \"col\": 3}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_metrics\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Key Metrics</b></span>\", \"col\": 12}}, {\"id\": \"nc_book\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Safari Bookings\", \"col\": 4}}, {\"id\": \"nc_conf\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Confirmed Bookings\", \"col\": 4}}, {\"id\": \"nc_rev\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Booking Revenue\", \"col\": 4}}, {\"id\": \"nc_ops\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Operations Sheets\", \"col\": 4}}, {\"id\": \"nc_job\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Workshop Job Cards\", \"col\": 4}}, {\"id\": \"nc_cli\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Safari Clients\", \"col\": 4}}, {\"id\": \"sp2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_analytics\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Analytics</b></span>\", \"col\": 12}}, {\"id\": \"ch_rev\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Booking Revenue Trend\", \"col\": 6}}, {\"id\": \"ch_time\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Bookings Over Time\", \"col\": 6}}, {\"id\": \"ch_status\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Safari Bookings by Status\", \"col\": 6}}, {\"id\": \"ch_pkg\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Safari Bookings by Package\", \"col\": 6}}, {\"id\": \"ch_job\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Workshop Job Cards by Status\", \"col\": 6}}, {\"id\": \"ch_disp\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Operations by Dispatch Status\", \"col\": 6}}, {\"id\": \"sp3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_master\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Masters &amp; Documents</b></span>\", \"col\": 12}}, {\"id\": \"cd_ops\", \"type\": \"card\", \"data\": {\"card_name\": \"Safari Operations\", \"col\": 4}}, {\"id\": \"cd_cli\", \"type\": \"card\", \"data\": {\"card_name\": \"Clients & CRM\", \"col\": 4}}, {\"id\": \"cd_work\", \"type\": \"card\", \"data\": {\"card_name\": \"Workshop & Fleet\", \"col\": 4}}, {\"id\": \"cd_sup\", \"type\": \"card\", \"data\": {\"card_name\": \"Suppliers & Procurement\", \"col\": 4}}, {\"id\": \"cd_ppl\", \"type\": \"card\", \"data\": {\"card_name\": \"People & Projects\", \"col\": 4}}]",
+ "creation": "2026-06-09 14:08:22.420706",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 1,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Sunny Safaris",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Safari Operations",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "description": "Manage safari booking reservations",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Safari Booking",
+   "link_count": 0,
+   "link_to": "Safari Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Daily operations planning",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Safari Operations Sheet",
+   "link_count": 0,
+   "link_to": "Safari Operations Sheet",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Clients & CRM",
+   "link_count": 7,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "description": "Client master with all transactions",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Safari Client",
+   "link_count": 0,
+   "link_to": "Safari Client",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Customer master",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Contact persons",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contact",
+   "link_count": 0,
+   "link_to": "Contact",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Sales leads",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Sales opportunities",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opportunity",
+   "link_count": 0,
+   "link_to": "Opportunity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Quotations",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quotation",
+   "link_count": 0,
+   "link_to": "Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Sales orders",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Workshop & Fleet",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "description": "Vehicle maintenance tasks",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Workshop Job Card",
+   "link_count": 0,
+   "link_to": "Workshop Job Card",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Fleet vehicles",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle (Asset)",
+   "link_count": 0,
+   "link_to": "Asset",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Suppliers & Procurement",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "description": "Suppliers and vendors",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Items and spare parts",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "People & Projects",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "description": "Drivers, guides and mechanics",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "description": "Projects",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-09 20:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Sunny Safaris",
+ "name": "sunny-safaris",
+ "number_cards": [
+  {
+   "label": "Total Safari Bookings",
+   "number_card_name": "Total Safari Bookings"
+  },
+  {
+   "label": "Confirmed Bookings",
+   "number_card_name": "Confirmed Bookings"
+  },
+  {
+   "label": "Booking Revenue",
+   "number_card_name": "Booking Revenue"
+  },
+  {
+   "label": "Total Operations Sheets",
+   "number_card_name": "Total Operations Sheets"
+  },
+  {
+   "label": "Open Workshop Job Cards",
+   "number_card_name": "Open Workshop Job Cards"
+  },
+  {
+   "label": "Safari Clients",
+   "number_card_name": "Safari Clients"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Safari Booking",
+   "link_to": "Safari Booking",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Safari Operations Sheet",
+   "link_to": "Safari Operations Sheet",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Workshop Job Card",
+   "link_to": "Workshop Job Card",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Safari Client",
+   "link_to": "Safari Client",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Sunny Safaris",
+ "type": "Workspace"
+}
