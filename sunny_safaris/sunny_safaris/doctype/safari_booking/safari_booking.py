@@ -52,6 +52,15 @@ class SafariBooking(Document):
 		self.calculate_financials()
 		self.set_customer_name()
 
+	def on_submit(self):
+		# Move the workflow status off "Draft" once the booking is confirmed,
+		# unless the user already advanced it to a later stage.
+		if self.booking_status in (None, "", "Draft"):
+			self.db_set("booking_status", "Confirmed")
+
+	def on_cancel(self):
+		self.db_set("booking_status", "Cancelled")
+
 	def calculate_duration(self):
 		if self.start_date and self.end_date:
 			from datetime import datetime
@@ -71,3 +80,26 @@ class SafariBooking(Document):
 			customer = frappe.db.get_value("Customer", self.customer, "customer_name")
 			if customer:
 				self.customer_name = customer
+
+
+@frappe.whitelist()
+def make_sales_invoice(source_name: str):
+	"""Create a Sales Invoice for a booking with a single 'Safari Package' line."""
+	from sunny_safaris.overrides.safari_billing import SAFARI_PACKAGE_ITEM, ensure_safari_package_item
+
+	booking = frappe.get_doc("Safari Booking", source_name)
+	ensure_safari_package_item()
+
+	si = frappe.new_doc("Sales Invoice")
+	si.customer = booking.customer
+	si.safari_booking = booking.name
+	si.append(
+		"items",
+		{
+			"item_code": SAFARI_PACKAGE_ITEM,
+			"qty": 1,
+			"rate": booking.total_amount or 0,
+		},
+	)
+	si.run_method("set_missing_values")
+	return si

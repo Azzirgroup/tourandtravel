@@ -159,6 +159,16 @@ doc_events = {
 	"Vehicle": {
 		"after_insert": "sunny_safaris.overrides.vehicle.create_hire_item",
 	},
+	"Sales Invoice": {
+		"on_submit": "sunny_safaris.overrides.safari_billing.update_booking_from_invoice",
+		"on_cancel": "sunny_safaris.overrides.safari_billing.update_booking_from_invoice",
+		"on_update_after_submit": "sunny_safaris.overrides.safari_billing.update_booking_from_invoice",
+	},
+	"Payment Entry": {
+		"validate": "sunny_safaris.overrides.safari_billing.set_payment_safari_booking",
+		"on_submit": "sunny_safaris.overrides.safari_billing.update_booking_from_payment",
+		"on_cancel": "sunny_safaris.overrides.safari_billing.update_booking_from_payment",
+	},
 }
 
 override_doctype_dashboards = {

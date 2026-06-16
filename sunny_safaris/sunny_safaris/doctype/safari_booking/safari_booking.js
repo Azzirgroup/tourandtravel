@@ -20,5 +20,19 @@ frappe.ui.form.on("Safari Booking", {
 			},
 			__("Create")
 		);
+
+		// Invoice the booking (single "Safari Package" line = total amount).
+		if (frm.doc.docstatus === 1) {
+			frm.add_custom_button(
+				__("Sales Invoice"),
+				() => {
+					frappe.model.open_mapped_doc({
+						method: "sunny_safaris.sunny_safaris.doctype.safari_booking.safari_booking.make_sales_invoice",
+						frm: frm,
+					});
+				},
+				__("Create")
+			);
+		}
 	},
 });

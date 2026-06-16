@@ -48,6 +48,8 @@
   "cb_financials_1",
   "balance_amount",
   "balance_paid",
+  "amount_paid",
+  "outstanding_amount",
   "sb_notes",
   "notes",
   "amended_from"
@@ -192,7 +194,10 @@
    "fieldtype": "Select",
    "label": "Booking Status",
    "options": "Draft\nConfirmed\nIn Progress\nCompleted\nCancelled",
-   "default": "Draft"
+   "default": "Draft",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
   },
   {
    "fieldname": "cb_status_1",
@@ -203,7 +208,9 @@
    "fieldtype": "Select",
    "label": "Payment Status",
    "options": "Unpaid\nPartial\nPaid",
-   "default": "Unpaid"
+   "default": "Unpaid",
+   "allow_on_submit": 1,
+   "in_list_view": 1
   },
   {
    "fieldname": "sb_travelers",
@@ -291,6 +298,21 @@
    "read_only": 1
   },
   {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid (Invoiced)",
+   "read_only": 1,
+   "no_copy": 1,
+   "description": "Total settled across linked Sales Invoices"
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
    "fieldname": "sb_notes",
    "fieldtype": "Section Break",
    "label": "Notes"
@@ -320,9 +342,19 @@
    "group": "Operations",
    "link_doctype": "Safari Operations Sheet",
    "link_fieldname": "booking"
+  },
+  {
+   "group": "Billing",
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "safari_booking"
+  },
+  {
+   "group": "Billing",
+   "link_doctype": "Payment Entry",
+   "link_fieldname": "safari_booking"
   }
  ],
- "modified": "2026-06-16 11:00:00.000000",
+ "modified": "2026-06-16 14:00:00.000000",
  "modified_by": "Administrator",
  "module": "Sunny Safaris",
  "name": "Safari Booking",

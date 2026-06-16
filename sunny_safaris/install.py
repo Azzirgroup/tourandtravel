@@ -142,6 +142,25 @@ APP_CUSTOM_FIELDS = {
 			"insert_after": "item_group",
 		},
 	],
+	# Link sales / payment documents back to the booking they settle.
+	"Sales Invoice": [
+		{
+			"fieldname": "safari_booking",
+			"label": "Safari Booking",
+			"fieldtype": "Link",
+			"options": "Safari Booking",
+			"insert_after": "project",
+		},
+	],
+	"Payment Entry": [
+		{
+			"fieldname": "safari_booking",
+			"label": "Safari Booking",
+			"fieldtype": "Link",
+			"options": "Safari Booking",
+			"insert_after": "project",
+		},
+	],
 }
 
 # Records that existed in earlier versions and should be removed on upgrade.
@@ -173,6 +192,10 @@ def setup_workspace_resources():
 	from sunny_safaris.overrides.vehicle import ensure_item_group
 
 	ensure_item_group()
+
+	from sunny_safaris.overrides.safari_billing import ensure_safari_package_item
+
+	ensure_safari_package_item()
 
 	create_number_cards()
 
