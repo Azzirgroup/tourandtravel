@@ -42,18 +42,18 @@ class WorkshopJobCard(Document):
 	# end: auto-generated types
 
 	def validate(self):
-		self.set_asset_details()
+		self.set_vehicle_details()
 		self.set_mechanic_name()
 		self.set_foreman_name()
 		self.calculate_total_cost()
 		self.set_approval_date()
 
-	def set_asset_details(self):
+	def set_vehicle_details(self):
 		if self.asset:
-			asset = frappe.db.get_value("Asset", self.asset, ["asset_name", "serial_no"])
-			if asset:
-				self.asset_name = asset[0]
-				self.registration_number = asset[1]
+			vehicle = frappe.db.get_value("Vehicle", self.asset, ["model", "license_plate"])
+			if vehicle:
+				self.asset_name = vehicle[0]
+				self.registration_number = vehicle[1]
 
 	def set_mechanic_name(self):
 		if self.mechanic:
@@ -69,12 +69,11 @@ class WorkshopJobCard(Document):
 
 	def calculate_total_cost(self):
 		parts_cost = 0
-		if self.parts_used:
-			for item in self.parts_used:
-				if item.amount:
-					parts_cost += item.amount
+		for item in self.parts_used or []:
+			item.amount = (item.quantity or 0) * (item.unit_price or 0)
+			parts_cost += item.amount
 		self.parts_cost = parts_cost
-		
+
 		labour_cost = self.labour_cost or 0
 		self.total_cost = parts_cost + labour_cost
 
