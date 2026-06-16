@@ -7,15 +7,11 @@ from frappe import _
 def get_dashboard_data(data):
 	"""Add Sunny Safaris transactions to the Customer 'Connections' tab."""
 	data.setdefault("transactions", [])
-	data.setdefault("non_standard_fieldnames", {})
-
-	# Safari Client is keyed by the customer name itself.
-	data["non_standard_fieldnames"]["Safari Client"] = "name"
 
 	data["transactions"].append(
 		{
 			"label": _("Safari"),
-			"items": ["Safari Client", "Safari Booking", "Safari Operations Sheet"],
+			"items": ["Safari Booking", "Safari Operations Sheet"],
 		}
 	)
 	return data

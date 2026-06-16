@@ -37,7 +37,6 @@ class SafariBooking(Document):
 		travelers: list | None
 		vehicle_assignments: list | None
 		guides: list | None
-		operations_sheet: DF.Link | None
 		total_amount: DF.Currency | None
 		deposit_amount: DF.Currency | None
 		deposit_paid: DF.Currency | None

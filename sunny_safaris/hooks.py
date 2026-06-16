@@ -43,7 +43,13 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# Add "Create > Safari Booking" to CRM documents.
+doctype_js = {
+	"Lead": ["public/js/safari_booking_helper.js", "public/js/lead.js"],
+	"Opportunity": ["public/js/safari_booking_helper.js", "public/js/opportunity.js"],
+	"Quotation": ["public/js/safari_booking_helper.js", "public/js/quotation.js"],
+	"Customer": ["public/js/safari_booking_helper.js", "public/js/customer.js"],
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -146,10 +152,13 @@ after_migrate = ["sunny_safaris.install.after_migrate"]
 
 doc_events = {
 	"Safari Booking": {
-		"on_update": "sunny_safaris.sunny_safaris.doctype.safari_client.safari_client.update_for_booking",
-		"on_submit": "sunny_safaris.sunny_safaris.doctype.safari_client.safari_client.update_for_booking",
-		"on_cancel": "sunny_safaris.sunny_safaris.doctype.safari_client.safari_client.update_for_booking",
-	}
+		"on_update": "sunny_safaris.overrides.safari_summary.update_customer_safari_summary",
+		"on_submit": "sunny_safaris.overrides.safari_summary.update_customer_safari_summary",
+		"on_cancel": "sunny_safaris.overrides.safari_summary.update_customer_safari_summary",
+	},
+	"Vehicle": {
+		"after_insert": "sunny_safaris.overrides.vehicle.create_hire_item",
+	},
 }
 
 override_doctype_dashboards = {

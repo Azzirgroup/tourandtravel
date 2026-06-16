@@ -41,8 +41,6 @@
   "guides",
   "sb_supplier_reservations",
   "supplier_reservations",
-  "sb_operations",
-  "operations_sheet",
   "sb_financials",
   "total_amount",
   "deposit_amount",
@@ -256,17 +254,6 @@
    "options": "Supplier Reservation"
   },
   {
-   "fieldname": "sb_operations",
-   "fieldtype": "Section Break",
-   "label": "Operations"
-  },
-  {
-   "fieldname": "operations_sheet",
-   "fieldtype": "Link",
-   "label": "Operations Sheet",
-   "options": "Safari Operations Sheet"
-  },
-  {
    "fieldname": "sb_financials",
    "fieldtype": "Section Break",
    "label": "Financials"
@@ -328,8 +315,14 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-06-09 20:45:00.000000",
+ "links": [
+  {
+   "group": "Operations",
+   "link_doctype": "Safari Operations Sheet",
+   "link_fieldname": "booking"
+  }
+ ],
+ "modified": "2026-06-16 11:00:00.000000",
  "modified_by": "Administrator",
  "module": "Sunny Safaris",
  "name": "Safari Booking",

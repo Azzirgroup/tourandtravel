@@ -68,7 +68,9 @@
    "fieldtype": "Link",
    "label": "Customer",
    "options": "Customer",
-   "read_only": 1
+   "read_only": 1,
+   "fetch_from": "booking.customer",
+   "fetch_if_empty": 0
   },
   {
    "fieldname": "customer_name",
@@ -121,7 +123,7 @@
    "fieldname": "vehicle",
    "fieldtype": "Link",
    "label": "Vehicle",
-   "options": "Asset",
+   "options": "Vehicle",
    "reqd": 1
   },
   {
@@ -129,7 +131,7 @@
    "fieldtype": "Data",
    "label": "Vehicle Name",
    "read_only": 1,
-   "fetch_from": "vehicle.asset_name"
+   "fetch_from": "vehicle.model"
   },
   {
    "fieldname": "driver",
@@ -231,7 +233,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-09 20:45:00.000000",
+ "modified": "2026-06-10 12:00:00.000000",
  "modified_by": "Administrator",
  "module": "Sunny Safaris",
  "name": "Safari Operations Sheet",
