@@ -9,6 +9,18 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "chart-pie",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Safari Analytics",
+   "link_to": "safari-analytics",
+   "link_type": "Page",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
    "icon": "house",
    "indent": 0,
    "keep_closed": 0,
@@ -51,6 +63,30 @@
    "label": "Workshop Job Card",
    "link_to": "Workshop Job Card",
    "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "clipboard-check",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Dispatch Board",
+   "link_to": "dispatch-board",
+   "link_type": "Page",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "truck",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Fleet Status",
+   "link_to": "fleet-status",
+   "link_type": "Page",
    "show_arrow": 0,
    "type": "Link"
   },
@@ -114,7 +150,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-16 09:30:00.000000",
+ "modified": "2026-06-20 00:28:37.907349",
  "modified_by": "Administrator",
  "module": "Sunny Safaris",
  "name": "Sunny Safaris",

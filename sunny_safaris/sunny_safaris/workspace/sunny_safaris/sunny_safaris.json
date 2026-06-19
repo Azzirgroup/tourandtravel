@@ -1,7 +1,7 @@
 {
  "app": "sunny_safaris",
  "charts": [],
- "content": "[{\"id\": \"hdr_main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Sunny Safaris</b></span>\", \"col\": 12}}, {\"id\": \"sc_book\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Booking\", \"col\": 4}}, {\"id\": \"sc_ops\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Operations Sheet\", \"col\": 4}}, {\"id\": \"sc_job\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Workshop Job Card\", \"col\": 4}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_metrics\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Key Metrics</b></span>\", \"col\": 12}}, {\"id\": \"nc_book\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Safari Bookings\", \"col\": 4}}, {\"id\": \"nc_conf\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Confirmed Bookings\", \"col\": 4}}, {\"id\": \"nc_rev\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Booking Revenue\", \"col\": 4}}, {\"id\": \"nc_ops\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Operations Sheets\", \"col\": 4}}, {\"id\": \"nc_job\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Workshop Job Cards\", \"col\": 4}}, {\"id\": \"sp2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_master\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Masters &amp; Documents</b></span>\", \"col\": 12}}, {\"id\": \"cd_ops\", \"type\": \"card\", \"data\": {\"card_name\": \"Safari Operations\", \"col\": 4}}, {\"id\": \"cd_cli\", \"type\": \"card\", \"data\": {\"card_name\": \"Clients & CRM\", \"col\": 4}}, {\"id\": \"cd_sales\", \"type\": \"card\", \"data\": {\"card_name\": \"Sales\", \"col\": 4}}, {\"id\": \"cd_proc\", \"type\": \"card\", \"data\": {\"card_name\": \"Procurement\", \"col\": 4}}, {\"id\": \"cd_stock\", \"type\": \"card\", \"data\": {\"card_name\": \"Stock\", \"col\": 4}}, {\"id\": \"cd_work\", \"type\": \"card\", \"data\": {\"card_name\": \"Workshop & Fleet\", \"col\": 4}}, {\"id\": \"cd_ppl\", \"type\": \"card\", \"data\": {\"card_name\": \"People & Projects\", \"col\": 4}}, {\"id\": \"sp4\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_reports\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports</b></span>\", \"col\": 12}}, {\"id\": \"cd_acc_rep\", \"type\": \"card\", \"data\": {\"card_name\": \"Accounting Reports\", \"col\": 4}}, {\"id\": \"cd_trade_rep\", \"type\": \"card\", \"data\": {\"card_name\": \"Sales & Purchase Reports\", \"col\": 4}}, {\"id\": \"cd_stock_rep\", \"type\": \"card\", \"data\": {\"card_name\": \"Stock Reports\", \"col\": 4}}]",
+ "content": "[{\"id\": \"hdr_main\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Sunny Safaris</b></span>\", \"col\": 12}}, {\"id\": \"sc_book\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Booking\", \"col\": 4}}, {\"id\": \"sc_ops\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Operations Sheet\", \"col\": 4}}, {\"id\": \"sc_job\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Workshop Job Card\", \"col\": 4}}, {\"id\": \"sc_dispatch\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Dispatch Board\", \"col\": 4}}, {\"id\": \"sc_fleet\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fleet Status\", \"col\": 4}}, {\"id\": \"sc_analytics\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Safari Analytics\", \"col\": 4}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_metrics\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Key Metrics</b></span>\", \"col\": 12}}, {\"id\": \"nc_book\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Safari Bookings\", \"col\": 4}}, {\"id\": \"nc_conf\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Confirmed Bookings\", \"col\": 4}}, {\"id\": \"nc_rev\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Booking Revenue\", \"col\": 4}}, {\"id\": \"nc_ops\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Operations Sheets\", \"col\": 4}}, {\"id\": \"nc_job\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Workshop Job Cards\", \"col\": 4}}, {\"id\": \"sp2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_master\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Masters &amp; Documents</b></span>\", \"col\": 12}}, {\"id\": \"cd_ops\", \"type\": \"card\", \"data\": {\"card_name\": \"Safari Operations\", \"col\": 4}}, {\"id\": \"cd_cli\", \"type\": \"card\", \"data\": {\"card_name\": \"Clients & CRM\", \"col\": 4}}, {\"id\": \"cd_sales\", \"type\": \"card\", \"data\": {\"card_name\": \"Sales\", \"col\": 4}}, {\"id\": \"cd_proc\", \"type\": \"card\", \"data\": {\"card_name\": \"Procurement\", \"col\": 4}}, {\"id\": \"cd_stock\", \"type\": \"card\", \"data\": {\"card_name\": \"Stock\", \"col\": 4}}, {\"id\": \"cd_work\", \"type\": \"card\", \"data\": {\"card_name\": \"Workshop & Fleet\", \"col\": 4}}, {\"id\": \"cd_ppl\", \"type\": \"card\", \"data\": {\"card_name\": \"People & Projects\", \"col\": 4}}, {\"id\": \"sp4\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_reports\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports</b></span>\", \"col\": 12}}, {\"id\": \"cd_acc_rep\", \"type\": \"card\", \"data\": {\"card_name\": \"Accounting Reports\", \"col\": 4}}, {\"id\": \"cd_trade_rep\", \"type\": \"card\", \"data\": {\"card_name\": \"Sales & Purchase Reports\", \"col\": 4}}, {\"id\": \"cd_stock_rep\", \"type\": \"card\", \"data\": {\"card_name\": \"Stock Reports\", \"col\": 4}}]",
  "creation": "2026-06-09 14:08:22.420706",
  "custom_blocks": [],
  "docstatus": 0,
@@ -526,7 +526,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-16 12:30:00.000000",
+ "modified": "2026-06-16 16:15:00.000000",
  "modified_by": "Administrator",
  "module": "Sunny Safaris",
  "name": "Sunny Safaris",
@@ -581,6 +581,30 @@
    "link_to": "Workshop Job Card",
    "stats_filter": "[]",
    "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "",
+   "label": "Dispatch Board",
+   "link_to": "dispatch-board",
+   "stats_filter": "[]",
+   "type": "Page"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Fleet Status",
+   "link_to": "fleet-status",
+   "stats_filter": "[]",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Safari Analytics",
+   "link_to": "safari-analytics",
+   "stats_filter": "[]",
+   "type": "Page"
   }
  ],
  "title": "Sunny Safaris",

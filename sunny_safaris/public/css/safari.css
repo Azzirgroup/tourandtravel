@@ -1,0 +1,152 @@
+/* Copyright (c) 2026, Rono and contributors */
+/* Shared visuals for Sunny Safaris desk pages. */
+
+.ss-wrap {
+	margin-top: 10px;
+}
+
+/* Page hero header */
+.ss-hero {
+	background: linear-gradient(135deg, #1e7d52 0%, #2bb673 60%, #43c787 100%);
+	color: #fff;
+	border-radius: 14px;
+	padding: 18px 22px;
+	margin-bottom: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 6px 18px rgba(30, 125, 82, 0.18);
+}
+.ss-hero h2 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 20px;
+	color: #fff;
+}
+.ss-hero .ss-hero-sub {
+	opacity: 0.9;
+	font-size: 13px;
+	margin-top: 2px;
+}
+
+/* Responsive grid of cards / stats */
+.ss-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--ss-min, 200px), 1fr));
+	gap: 14px;
+	margin-bottom: 18px;
+}
+
+/* KPI stat tile */
+.ss-stat {
+	background: var(--card-bg, #fff);
+	border: 1px solid var(--border-color, #ebeef0);
+	border-left: 4px solid #5e9cea;
+	border-radius: 12px;
+	padding: 16px 18px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.ss-stat:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.ss-stat-label {
+	font-size: 11px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--text-muted, #8d99a6);
+	font-weight: 600;
+}
+.ss-stat-value {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-top: 6px;
+	color: var(--text-color, #1f272e);
+}
+.ss-stat-sub {
+	font-size: 12px;
+	color: var(--text-muted, #8d99a6);
+	margin-top: 4px;
+}
+
+/* accent colours */
+.ss-accent-blue { border-left-color: #5e9cea; }
+.ss-accent-blue .ss-stat-value { color: #2c6fd6; }
+.ss-accent-green { border-left-color: #46c780; }
+.ss-accent-green .ss-stat-value { color: #1f9d57; }
+.ss-accent-orange { border-left-color: #f5a623; }
+.ss-accent-orange .ss-stat-value { color: #d9851a; }
+.ss-accent-purple { border-left-color: #9b7bd4; }
+.ss-accent-purple .ss-stat-value { color: #7a52c2; }
+.ss-accent-red { border-left-color: #e8705f; }
+.ss-accent-red .ss-stat-value { color: #d6492f; }
+.ss-accent-teal { border-left-color: #2bb6a3; }
+.ss-accent-teal .ss-stat-value { color: #1d9486; }
+
+/* Panel / card */
+.ss-card {
+	background: var(--card-bg, #fff);
+	border: 1px solid var(--border-color, #ebeef0);
+	border-radius: 12px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	margin-bottom: 18px;
+	overflow: hidden;
+}
+.ss-card-head {
+	padding: 12px 18px;
+	font-weight: 600;
+	font-size: 14px;
+	border-bottom: 1px solid var(--border-color, #ebeef0);
+	color: var(--text-color, #1f272e);
+}
+.ss-card-body {
+	padding: 16px 18px;
+}
+.ss-chart {
+	width: 100%;
+	min-height: 240px;
+}
+
+/* Charts two-up layout */
+.ss-cols-2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 18px;
+}
+
+/* Pretty table */
+.ss-table {
+	width: 100%;
+	background: var(--card-bg, #fff);
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid var(--border-color, #ebeef0);
+	border-radius: 12px;
+	overflow: hidden;
+}
+.ss-table thead th {
+	background: var(--subtle-fg, #f4f5f6);
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: var(--text-muted, #8d99a6);
+	padding: 10px 14px;
+	text-align: left;
+	border-bottom: 1px solid var(--border-color, #ebeef0);
+}
+.ss-table tbody td {
+	padding: 11px 14px;
+	border-bottom: 1px solid var(--border-color, #f0f2f4);
+	font-size: 13px;
+	vertical-align: middle;
+}
+.ss-table tbody tr:last-child td {
+	border-bottom: none;
+}
+.ss-table tbody tr:hover td {
+	background: var(--subtle-accent, #f7fbf9);
+}
+.ss-right { text-align: right; }
+.ss-muted { color: var(--text-muted, #8d99a6); }

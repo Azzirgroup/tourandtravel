@@ -25,8 +25,8 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/sunny_safaris/css/sunny_safaris.css"
-# app_include_js = "/assets/sunny_safaris/js/sunny_safaris.js"
+app_include_css = "/assets/sunny_safaris/css/safari.css"
+app_include_js = "/assets/sunny_safaris/js/safari_ui.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sunny_safaris/css/sunny_safaris.css"
