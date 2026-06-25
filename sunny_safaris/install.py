@@ -122,6 +122,14 @@ APP_CUSTOM_FIELDS = {
 	# Bidirectional link between an ERPNext Vehicle and its auto-created hire Item.
 	"Vehicle": [
 		{
+			"fieldname": "is_hired",
+			"label": "Is Hired",
+			"fieldtype": "Check",
+			"default": "0",
+			"insert_after": "model",
+			"description": "Vehicle is hired/rented from a third party (not company-owned).",
+		},
+		{
 			"fieldname": "safari_hire_item",
 			"label": "Hire Item",
 			"fieldtype": "Link",

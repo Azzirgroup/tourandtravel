@@ -83,6 +83,64 @@ class SafariBooking(Document):
 
 
 @frappe.whitelist()
+def get_unavailable_resources(start_date: str, end_date: str, booking: str | None = None):
+	"""Vehicles / drivers / guides already committed to other trips that overlap the dates.
+
+	Used by the booking form to filter selections to available resources only.
+	"""
+	empty = {"vehicles": [], "drivers": [], "guides": []}
+	if not start_date or not end_date:
+		return empty
+
+	# Other (non-cancelled) bookings whose [start, end] overlaps this range.
+	booking_filters = {
+		"docstatus": ["<", 2],
+		"booking_status": ["!=", "Cancelled"],
+		"start_date": ["<=", end_date],
+		"end_date": [">=", start_date],
+	}
+	if booking:
+		booking_filters["name"] = ["!=", booking]
+	others = frappe.get_all("Safari Booking", filters=booking_filters, pluck="name")
+
+	vehicles, drivers, guides = set(), set(), set()
+
+	if others:
+		for r in frappe.get_all(
+			"Vehicle Assignment",
+			filters={"parenttype": "Safari Booking", "parent": ["in", others]},
+			fields=["vehicle", "driver"],
+		):
+			vehicles.add(r.vehicle)
+			drivers.add(r.driver)
+		guides.update(
+			frappe.get_all(
+				"Booking Guide",
+				filters={"parenttype": "Safari Booking", "parent": ["in", others]},
+				pluck="guide",
+			)
+		)
+
+	# Operations sheets scheduled inside the range (excluding this booking's own).
+	for r in frappe.get_all(
+		"Safari Operations Sheet",
+		filters={"docstatus": ["<", 2], "operation_date": ["between", [start_date, end_date]]},
+		fields=["vehicle", "driver", "guide", "booking"],
+	):
+		if booking and r.booking == booking:
+			continue
+		vehicles.add(r.vehicle)
+		drivers.add(r.driver)
+		guides.add(r.guide)
+
+	return {
+		"vehicles": sorted(v for v in vehicles if v),
+		"drivers": sorted(d for d in drivers if d),
+		"guides": sorted(g for g in guides if g),
+	}
+
+
+@frappe.whitelist()
 def make_sales_invoice(source_name: str):
 	"""Create a Sales Invoice for a booking with a single 'Safari Package' line."""
 	from sunny_safaris.overrides.safari_billing import SAFARI_PACKAGE_ITEM, ensure_safari_package_item
