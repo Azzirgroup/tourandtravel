@@ -32,3 +32,7 @@ class SupplierReservation(Document):
 			supplier_name = frappe.db.get_value("Supplier", self.supplier, "supplier_name")
 			if supplier_name:
 				self.supplier_name = supplier_name
+
+
+
+
